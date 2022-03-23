@@ -17,15 +17,15 @@
  * e.g.
  * sumOdds([1, 2, 3, 4, 5, 6, 7, 8, 9]) -> 25
  * sumOdds([3, 7, 8, 15, 2, 1, 13]) -> 39
- */
+ ////////FINISH IT PASSED*/
+
 function sumOdds(numbers) {
   let sum = 0;
-  numbers.forEach((number) => {
-    if (number % 2 === 1) {
-      sum = sum + number;
-    }
-    return sum;
+  let nums = numbers.filter((number) => number % 2 === 1);
+  nums.forEach((number) => {
+    sum = sum + number;
   });
+  return sum;
 }
 console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
 
@@ -41,15 +41,16 @@ console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
  *
  * Hint: You need to turn the string into an array first
  * Another Hint: Use string methods to make it case-insensitive
- */
+ /////// FINISH IT PASSED*/
+
 function characterCount(string, c) {
-  let n = 0;
-  let char = 0;
-  character.split(char);
-  if (char === c) n += 1;
-  return n;
+  let chars = Array.from(string.toLowerCase());
+  let charOfC = chars.filter((character) => character === c.toLowerCase());
+
+  return charOfC.length;
 }
-// console.log(characterCount("Character Count is clever", "c"));
+
+console.log(characterCount("Character Count is clever", "c"));
 
 /**
  * largestIncrement(numbers):
@@ -82,9 +83,11 @@ function largestIncrement(numbers) {
  * e.g.
  * afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3) -> [4, 5, 6, 7, 8, 9]
  * afterX([11, 35, 52, 14, 56, 601, 777, 888, 999], 52) -> [14, 56, 601, 777, 888, 999]
- */
+  ///////////Finish it Passed*/
+
 function afterX(numbers, x) {
-  if (numbers.indexOf([x]) === x) return numbers.slice(number.indexOf([x]), 9);
+  // //if (numbers.indexOf(x) === x) no need
+  return numbers.splice(numbers.indexOf(x) + 1, numbers.length);
 }
 
 console.log(afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
@@ -99,16 +102,15 @@ console.log(afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
  * abbreviate("jordan", "peterson") -> "JP"
  *
  * Hint: Use string method .toUpperCase()
- */
+ ////// FINISH IT PASSED */
+
 function abbreviate(firstName, lastName) {
-  // let f = [];
-  // let l = [];
-  // f = firstName.indexOf(0);
-  // l = lastName.indexOf(0);
-  //return f.toUpperCase + l.toUpperCase;
-  return firstName.indexOf(0).toUpperCase + lastName.indexOf(0).toUpperCase;
+  let f = firstName.toUpperCase();
+  let l = lastName.toUpperCase();
+  return f[0] + l[0];
+  // return firstName.toUpperCase().indexOf(0) + lastName.toUpperCase().indexOf(0);
 }
-// console.log(abbreviate("miss", "Stephane"));
+console.log(abbreviate("miss", "Stephane"));
 
 /**
  * isUpperCase(string):
@@ -119,9 +121,16 @@ function abbreviate(firstName, lastName) {
  * isUpperCase("Mickey S") -> false
  * isUpperCase("JCREW") -> true
  *
- */
+/////// FINIDH IT PASSED */
+
 function isUpperCase(string) {
   return string === string.toUpperCase();
+  // let x = string.toUpperCase();
+  // if (x === string) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
 }
 
 console.log(isUpperCase("JCREW"));
@@ -135,13 +144,10 @@ console.log(isUpperCase("JCREW"));
  * elementInArray([5, 6, 7], 6) -> true
  * elementInArray([5, 6, 7], 8) -> false
  *
- */
+ /////// FINISH IT PASSED */
+
 function elementInArray(numbers, x) {
-  //number.forEach(x => {
-  //  if
-  // })
-  //if (numbers.indexOf([x])=== x)
-  return numbers.indexOf([x]) === x;
+  return numbers.indexOf[x] === x;
 }
 
 console.log(elementInArray([5, 6, 7], 8));
